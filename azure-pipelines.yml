@@ -8,7 +8,7 @@ pool:
 
 steps:
 - script: echo "start"
-- ${{ if contains(variables['noSuchKey'], 'abc') }}:
+- ${{ if contains(null, 'abc') }}:
   - script: echo "match"
 - ${{ else }}:
   - script: echo "no match"
