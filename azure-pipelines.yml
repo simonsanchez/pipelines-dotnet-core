@@ -8,7 +8,7 @@ pool:
 
 steps:
 - script: echo "start"
-- ${{ if contains(variables.foo) }}:
+- ${{ if contains(variables.foo, 'abc') }}:
   - script: echo "match"
 - ${{ else }}:
   - script: echo "no match"
